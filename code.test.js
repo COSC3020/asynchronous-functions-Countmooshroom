@@ -18,15 +18,13 @@ const test =
         for (let i = 0; i < arr.length; i++) {
             if (arr[i] == key) { a1++; }
         }
-        //console.log(arr, key);
-        //console.log(a1);
 
         //use the function
         occurrences(arr, key, function(err, result) {
             if (err) {
-                console.error(err);
+                return false;
             } else {
-                console.log(a1 == result);
+                return a1 == result;
             }
         });
     });
